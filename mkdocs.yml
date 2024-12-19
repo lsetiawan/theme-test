@@ -1,0 +1,38 @@
+site_name: My Docs
+site_url: https://sitename.example
+copyright: Copyright &copy; 2024 Chris
+
+theme:
+  name: material
+  font:
+    text: Inter
+    code: Roboto Mono
+  icon:
+    logo: fontawesome/solid/w
+
+  palette: 
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+
+  features:
+  - navigation.footer
+
+extra:
+  social:
+    - icon: simple/youtube
+      link: https://youtube.com
+
