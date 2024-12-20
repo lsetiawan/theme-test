@@ -1,0 +1,172 @@
+/* || ------ BREAKLINES ------ */
+
+.md-typeset hr {
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    unicode-bidi: isolate;
+    overflow: hidden;
+    border-bottom:var(--md-border-color) 1px solid;
+}
+
+
+/* || ------ KEYBUTTONS ------ */
+
+.md-typeset kbd {
+    background-color: var(--md-code-bg-color);
+    border-radius: var(--md-border-radius);
+    box-shadow: none;
+    border-bottom: var(--md-content-color-darkest) 3px solid;
+    box-shadow: var(--md-shadow-z2);
+    padding: 0.1rem 0.3rem;
+    font-size: var(--md-300);
+}
+
+[data-md-color-scheme="slate"] .md-typeset kbd {
+    background-color: var(--md-code-bg-color);
+    border-bottom: var(--md-default-bg-color) 3px solid;
+}
+
+/* || ------ CODEBLOCKS ------ */
+
+.md-typeset code {
+    padding:2px;
+}
+
+.md-typeset .md-code__content {
+    border-radius: var(--md-border-radius);
+}
+.md-typeset .highlight .hll {
+    background: linear-gradient(to right, var(--md-accent-fg-color--transparent), transparent);
+    box-shadow: 2px 0 0 0 var(--md-accent-fg-color) inset;
+}
+
+/* Style codeblocks that have line numers or title */
+.md-typeset .highlighttable tbody .filename {
+    border-radius: 0;
+    border-top-left-radius: var(--md-border-radius);
+    border-top-right-radius: var(--md-border-radius);
+}
+.md-typeset .highlighttable tbody .linenos {
+    border-radius: 0;
+    border-top-left-radius: var(--md-border-radius);
+    border-bottom-left-radius: var(--md-border-radius);
+}
+.md-typeset .highlighttable tbody .code code {
+    border-radius: 0;
+    border-top-right-radius: var(--md-border-radius);
+    border-bottom-right-radius: var(--md-border-radius);
+}
+
+/* Style tabbed blocks */
+.md-typeset .tabbed-set .tabbed-labels {
+    background:var(--md-table-top-color);
+    border-top-left-radius: var(--md-border-radius);
+    border-top-right-radius: var(--md-border-radius);
+}
+
+.js .md-typeset .tabbed-labels::before {
+    background: var(--md-typeset-color-white);
+}
+.md-typeset .tabbed-set .tabbed-labels code {
+    background: none;
+}
+.md-typeset .tabbed-labels>label>[href]:first-child { color: var(--md-typeset-color-white); }
+
+.md-typeset .highlighttable .linenodiv .normal a {
+    border: none;
+}
+
+@media screen and (max-width: 44.9844em) {
+    .md-content__inner>.tabbed-set .tabbed-labels {
+        max-width: auto;
+        margin: 0 0; 
+        scroll-padding-inline-start: 0.8rem;
+    }
+}
+
+
+.md-clipboard { color: var(--md-code-fg-color);}
+.md-clipboard::after {
+    height: 18px;
+    width: 18px;
+}
+
+/* || ------ ADMONITIONS ------ */
+
+.md-typeset .admonition-title {
+    margin: -20px -.6rem .6rem -.6rem;
+}
+
+.md-typeset .admonition, .md-typeset details {
+    border:none;
+    border-left:4px solid currentColor;
+    position: relative;
+    box-shadow: var(--md-shadow-z2);
+}
+
+/* Dark title background for dark mode */
+[data-md-color-scheme="slate"] .md-typeset .admonition-title, [data-md-color-scheme="slate"] .md-typeset details summary {
+    background: hsl(228, 10%, 6%) !important;
+}
+
+.md-typeset .admonition:has(.admonition-title) { padding-top: 20px;}
+/*.md-typeset .admonition-title:has(+ h2) { margin:-20px -12px 0;} -- Previous sibling  */
+
+/* Change margins if headings are first in admonition */
+.md-typeset .admonition > h2:first-of-type { margin:0;}
+.md-typeset .admonition h2:not(:first-of-type) {margin:12px 0}
+.md-typeset .admonition > h3:first-of-type { margin: 0;}
+.md-typeset .admonition > h4:first-of-type { margin:0;}
+
+
+/* || ------ FOOTNOTES ------ */
+
+.md-typeset .footnote-ref {
+    border-bottom: none;
+    color: var(--md-accent-fg-color);
+    font-size: var(--md-300);
+    outline: none !important;
+}
+.md-typeset .footnote ol li {
+    margin:0;
+}
+.md-typeset .footnote-backref {
+    height:.8rem;
+    width:.8rem;
+    border-bottom: none;
+}
+.md-typeset .footnote-backref:hover {border-bottom: none;}
+
+
+/* || ------ TABLE ------ */
+
+/* Table top title */
+thead th {
+    color: var(--md-primary-bg-color);
+    background-color: var(--md-table-top-color);
+    border-bottom:1px solid var(--md-accent-fg-color);
+}
+
+.md-typeset table:not([class]) tr {
+    border-top: .05rem solid var(--md-border-color);
+}
+
+.md-typeset table:not([class]) tr:first-child {
+    border: none;
+}
+
+.md-typeset table:not([class]) {
+    border: none;
+    font-size: var(--md-300);
+    box-shadow: var(--md-shadow-z2);
+    border-radius: var(--md-border-radius);
+}
+
+/* || ------ LISTS ------ */
+.md-typeset ol li::marker {
+    color: var(--md-accent-fg-color);
+    font-size: var(--md-300);
+}
