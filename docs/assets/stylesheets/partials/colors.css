@@ -15,6 +15,7 @@
     --grey-800: hsla(210, 4%, 18%, 1);
     --grey-900: hsla(0, 0%, 15%, 1);
     --grey-950: hsla(0, 0%, 9%, 1);
+    --grey-990: hsla(0, 0%, 6%, 1);
 
     /* Light | White */
     --neutral-25: hsla(240, 20%, 99%, 1);
@@ -96,7 +97,7 @@
 
 
     /* // Primary color shades */
-    --md-primary-fg-color:               var(--grey-950);
+    --md-primary-fg-color:               var(--grey-800);
     --md-primary-fg-color--light:        var(--base-white);
     --md-primary-fg-color--dark:         var(--grey-600);
     --md-primary-bg-color:               var(--neutral-200);
@@ -149,7 +150,7 @@
     --md-footer-fg-color--light:         hsla(0, 0%, 100%, 0.7);
     --md-footer-fg-color--lighter:       hsla(0, 0%, 100%, 0.45);
     --md-footer-bg-color:                var(--neutral-800);
-    --md-footer-bg-color--dark:          var(--grey-950);
+    --md-footer-bg-color--dark:          var(--grey-800);
   }
 
 /* Only use dark mode on screens */
@@ -185,7 +186,7 @@
     --md-table-top-color: hsl(228, 10%, 6%);  
 
     /* // Primary color shades */
-    --md-primary-fg-color:               var(--grey-950);
+    --md-primary-fg-color:               var(--grey-990);
     --md-primary-fg-color--light:        var(--base-white);
     --md-primary-fg-color--dark:         var(--grey-600);
     --md-primary-bg-color:               var(--neutral-200);
@@ -228,6 +229,6 @@
     --md-footer-fg-color--light:         hsla(0, 0%, 100%, 0.7);
     --md-footer-fg-color--lighter:       hsla(0, 0%, 100%, 0.45);
     --md-footer-bg-color:              var(--grey-900);
-    --md-footer-bg-color--dark:        var(--grey-950);
+    --md-footer-bg-color--dark:        var(--grey-990);
   }
 }

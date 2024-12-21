@@ -53,6 +53,7 @@ theme:
     - content.tooltips
     - navigation.top
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.indexes
     - navigation.sections
     - navigation.expand

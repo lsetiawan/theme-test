@@ -33,3 +33,87 @@ html {
     anchor-name: --betaAnchor;
     width: fit-content;
 }
+
+
+/* --------------------
+
+    New Header styling
+
+--------------------- */
+
+.md-header {
+    padding-block: 16px;
+}
+
+.md-header__title {
+    width: fit-content;
+    margin: 0 !important;
+}
+
+.md-tabs {
+    width: fit-content;
+    flex-grow: 1;
+}
+
+.void {
+    flex-grow: 1;
+}
+
+/* .md-header__option, .md-search, .md-source {
+    justify-self: end;
+} */
+
+/* New logo */
+.md-header__title {
+    flex: 0 0 7rem;
+}
+/* .mdx-header--logo {
+    justify-self: start;
+} */
+.md-header__topic .mdx-header--logo svg {
+    height: 20px;
+    transform: translateY(.2rem);
+}
+
+[dir=ltr] .md-header__source {
+    margin-left:0rem
+}
+
+/* move header topic and scale fontsize down */
+[data-md-component="header-topic"].md-header__topic {
+    font-size: .55rem;
+    position: absolute;
+    top: 1rem;
+    left: 1.4rem;
+}
+
+.md-header__title--active .md-header__topic {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+[dir=rtl] .md-header__title--active .md-header__topic {
+    transform: translateX(0)
+}
+
+/* Tabs navigation */
+[dir=ltr] .md-tabs__list {
+    margin-left: 0rem
+}
+
+[dir=rtl] .md-tabs__list {
+    margin-right: 0rem
+}
+
+/* --- Increase content width --- */
+.md-grid--wide {
+    max-width:100%;
+    gap: 10px;
+    padding-inline: 1.1rem;
+}
+
+@media screen and (min-width: 60em) {
+    .md-grid--wide {
+        gap: 30px;
+    }
+}

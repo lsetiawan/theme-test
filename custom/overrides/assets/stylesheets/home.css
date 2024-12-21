@@ -1,53 +1,3 @@
-
-/* Font levels
-
-1. - Display | avg. 4 text styles
-2. - Heading | avg. 6 text styles
-3. - Body    | avg. 3 text styles
-4. - Label   | avg. 3 text styles
-
-Naming ==
-Base + modifier + modifier (Display + X-Large)
-
-Bases ==
-Typographic level   | Display, Heading, Body, Link, Label
-HTML Tags           | H1, H2, H3, P
-Token               | dont-size-1, font-size-2, font-size-3
-T-shirt sizing      | xs, sm, md, lg, xl
-
-Modifiers ==
-Fontweight          | Regular, Medium, Semibold, Bold
-Numerals            | 100,200,300,400,500,600,700,800,900
-Tshirt sizing       | xs, sm, md, ls, xl, xxl
-Text emphasis       | Italic, Underline
-Context             | Link navigation, Section header
-Lettercase Property | Uppercase
-Interaction State   | Default, Hover, Focus, Active, Disabled
-Device Size         | Desktop, Mobile, Large screen, Small screen
-
-Typescales == (Popular = Major second (1.125)
-
-Common sizes (pt):
-Display             | 32, 42, 48, 60, 72, 78, 96
-Heading             | 14, 16, 20, 24, 28, 32, 40, 48
-Body                | 12, 13, 14, 16, 18
-Label               | 10, 12, 13, 14
-
-Lineheight (4px):
-Display             | 120.81%
-Heading             | 132.36%
-Body                | 147%
-Label               | 141.76%
-
-Letter spacing %:
-
-Display             | -2.5% to -0.01em
-Heading             | -0.02em to 0%
-Body                | 0% to 1%
-Label               | 0% to 3%
-
-*/
-
 .md-main { height: 100%;}
 @media (min-width: 76.25em) { .md-main { display: none;} }
 
@@ -62,6 +12,12 @@ body {
     line-height: 24px;
     letter-spacing: 0.15px;
     color: var(--grey-50);
+}
+
+/* remove header topic from homepage */
+/* move header topic and scale fontsize down */
+[data-md-component="header-topic"].md-header__topic .md-ellipsis {
+    display: none;
 }
 
 .lp-container {
