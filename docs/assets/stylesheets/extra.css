@@ -59,10 +59,6 @@ html {
     flex-grow: 1;
 }
 
-/* .md-header__option, .md-search, .md-source {
-    justify-self: end;
-} */
-
 /* New logo */
 .md-header__title {
     flex: 0 0 7rem;
@@ -71,6 +67,7 @@ html {
     justify-self: start;
 } */
 .md-header__topic .mdx-header--logo svg {
+    display: inline-block;
     height: 20px;
     transform: translateY(.2rem);
 }

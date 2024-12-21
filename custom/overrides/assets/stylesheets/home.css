@@ -15,9 +15,8 @@ body {
 }
 
 /* remove header topic from homepage */
-/* move header topic and scale fontsize down */
 [data-md-component="header-topic"].md-header__topic .md-ellipsis {
-    display: none;
+    visibility: hidden;
 }
 
 .lp-container {
