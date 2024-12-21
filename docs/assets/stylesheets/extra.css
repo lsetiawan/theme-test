@@ -10,3 +10,26 @@ html {
     overflow-x: hidden;
 }
 
+/* Custom beta jekyll frontmatter variable */
+.md-beta {
+    position: absolute;
+    position-anchor: --betaAnchor;
+    right: anchor(right);
+    top: anchor(top);
+    transform: translateX(3rem) translateY(calc(var(--fs-display-m) * 0.5));
+
+
+    color: rgb(33, 112, 5);
+    background-color: rgb(209, 250, 179);
+    border: 1px solid rgb(168, 241, 112);
+    padding: 2px 6px;
+    border-radius: var(--br-04);
+    font-weight: 600;
+    font-size: 0.7rem;
+    line-height: 16px;
+}
+
+.md-content__inner h1 {
+    anchor-name: --betaAnchor;
+    width: fit-content;
+}

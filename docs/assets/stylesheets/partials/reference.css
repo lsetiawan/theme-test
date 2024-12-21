@@ -21,7 +21,7 @@
     border-bottom: var(--md-content-color-darkest) 3px solid;
     box-shadow: var(--md-shadow-z2);
     padding: 0.1rem 0.3rem;
-    font-size: var(--md-300);
+    font-size: var(--fs-text-xxs);
 }
 
 [data-md-color-scheme="slate"] .md-typeset kbd {
@@ -35,16 +35,27 @@
     padding:2px;
 }
 
+/* Remove background on code icons and when hovering */
+.md-code__nav, :hover>.md-code__nav {
+    background: none;
+}
+.md-code__button {
+    color: var(--md-default-fg-color--light);
+}
+:hover>*>.md-code__button {
+    color: var(--fc-base-main);
+}
+
+.md-typeset code, .md-typeset .linenos {
+    background: var(--md-code-bg-color);
+}
+
 .md-typeset .md-code__content {
     border-radius: var(--md-border-radius);
 }
-.md-typeset .highlight .hll {
-    background: linear-gradient(to right, var(--md-accent-fg-color--transparent), transparent);
-    box-shadow: 2px 0 0 0 var(--md-accent-fg-color) inset;
-}
 
 /* Style codeblocks that have line numers or title */
-.md-typeset .highlighttable tbody .filename {
+.md-typeset .highlighttable tbody .filename, .md-typeset .highlight .filename {
     border-radius: 0;
     border-top-left-radius: var(--md-border-radius);
     border-top-right-radius: var(--md-border-radius);
@@ -54,10 +65,23 @@
     border-top-left-radius: var(--md-border-radius);
     border-bottom-left-radius: var(--md-border-radius);
 }
+/* Change linenos numbercolor since they're links */
+.linenos a {
+    color: var(--md-code-fg-color) !important;
+}
+
 .md-typeset .highlighttable tbody .code code {
     border-radius: 0;
     border-top-right-radius: var(--md-border-radius);
     border-bottom-right-radius: var(--md-border-radius);
+}
+
+/* Remove border radius if line numbered codeblock has filename */
+.highlighttable:has(.filename) .linenos {
+    border-top-left-radius: 0 !important;
+}
+.highlighttable:has(.filename) code {
+    border-top-right-radius: 0 !important;
 }
 
 /* Style tabbed blocks */
@@ -67,8 +91,16 @@
     border-top-right-radius: var(--md-border-radius);
 }
 
+/* Force link colors */
+.js .md-typeset .tabbed-labels label a, .js .md-typeset .tabbed-labels label a code {
+    color: var(--base-white) !important;
+}
+.js .md-typeset .tabbed-labels label a:hover, .js .md-typeset .tabbed-labels label a:hover code {
+    color: var(--grey-200) !important;
+}
+
 .js .md-typeset .tabbed-labels::before {
-    background: var(--md-typeset-color-white);
+    background: var(--fc-base-main);
 }
 .md-typeset .tabbed-set .tabbed-labels code {
     background: none;
@@ -144,8 +176,8 @@
 /* || ------ TABLE ------ */
 
 /* Table top title */
-thead th {
-    color: var(--md-primary-bg-color);
+thead th, .highlight span.filename{
+    color: var(--base-white);
     background-color: var(--md-table-top-color);
     border-bottom:1px solid var(--md-accent-fg-color);
 }

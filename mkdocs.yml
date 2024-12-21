@@ -1,13 +1,14 @@
 # Project information
 site_name: My Docs
-site_url: https://sitename.example
+site_url: https://a3bagged.github.io/theme-test/
 site_author: Chris van Liere
 site_description: >-
   Unlock the best of your printer with back-to-basic firmware, customizable for all creality printers. Achieve more results with less creality.
 
 #Repository
-repo_name: Github
+repo_name: A3Bagged/theme-test
 repo_url: https://github.com/A3Bagged/theme-test
+edit_uri: edit/main/docs/
 
 copyright: Copyright &copy; 2024 - All rights reserved
 
@@ -22,22 +23,20 @@ theme:
   logo: assets/logo.png
   favicon: assets/favicon.png
   icon:
+    repo: fontawesome/brands/github
     logo: fontawesome/solid/w
+    annotation: material/plus-circle
 
   palette: 
-    # Dark mode
+    # Light mode
     - media: "(prefers-color-scheme: dark)"
       scheme: default
-      primary: custom
-      accent: custom
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
-    # Light mode
+    # Dark mode
     - media: "(prefers-color-scheme: light)"
       scheme: slate
-      primary: custom
-      accent: custom
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to light mode
@@ -49,12 +48,15 @@ theme:
     - content.code.select
     - content.tabs.link
     - content.footnote.tooltips
+    - content.action.edit
+    #- content.action.view
+    - content.tooltips
     - navigation.top
     - navigation.tabs
     - navigation.indexes
     - navigation.sections
     - navigation.expand
-    - navigation.path
+    - navigation.prune
     - navigation.footer
     - navigation.instant
     - navigation.instant.progress
@@ -63,9 +65,10 @@ theme:
     - search.share
     - search.suggest
     - toc.follow
-    - content.action.edit
-    - content.action.view
-    - content.tooltips
+
+    #Insiders only
+    - navigation.path
+    - navigation.instant.prefetch
 
 #Extra styling CSS/Java
 extra_css:
@@ -73,17 +76,30 @@ extra_css:
 
 # Plugins
 plugins:
-  - blog
+  - blog:
+      archive_date_format: yyyy
+      archive_url_date_format: yyyy
+      draft: true
+      post_url_format: "{slug}"
   - search:
       lang: en
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - tags
 
+  # INSIDERS=1 mkdocs build
+  - group:
+      enabled: !ENV INSIDERS
+      plugins:
+        - optimize
+        - social
+        - typeset
+
+
 extra:
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
-  generator: false
+  #generator: false
   social:
     - icon: simple/kofi
       link: https://ko-fi.com/pellcorp49698
@@ -135,5 +151,11 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting started:
+    - getting-started.md
     - Markdown: markdown.md
     - Setup example: setup.md
+    - Example page: cartographer.md
+  - FAQ: FAQ.md
+  - Using beta tags: test.md
+  - Blog:
+    - blog/index.md

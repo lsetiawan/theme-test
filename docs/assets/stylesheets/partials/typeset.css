@@ -18,57 +18,30 @@ body {
 /* || ------ CONTENT LINKS ------ */
 
 .md-content__inner a { color: var(--fc-primary);}
-.md-content__inner a:hover { border-bottom: 1px solid var(--fc-primary);}
-
-
-/* Remove border for tables */
-.md-content__inner label a, .md-content__inner label a:hover,
-.md-content__inner .grid a, .md-content__inner .grid a:hover {border-bottom: none;}
-
+.md-content__inner a:hover { color: var(--md-title-color);}
 
 /* || ------ HEADINGS ------ */
 
 
-/* || ---- Custom page heading ---- || */
-[data-md-color-scheme="default"] .md-typeset  h2,
-[data-md-color-scheme="default"] .md-typeset  h3,
-[data-md-color-scheme="default"] .md-typeset  h4,
-[data-md-color-scheme="default"] .md-typeset  h5,
-[data-md-color-scheme="default"] .md-typeset  h6 {
-    color: var(--md-title-color);
-}
 
-[data-md-color-scheme="slate"] .md-typeset  h2,
-[data-md-color-scheme="slate"] .md-typeset  h3,
-[data-md-color-scheme="slate"] .md-typeset  h4,
-[data-md-color-scheme="slate"] .md-typeset  h5,
-[data-md-color-scheme="slate"] .md-typeset  h6 {
-    color: var(--md-title-color);
-}
 
 .md-typeset h1 {
-font-family: "Encode Sans", "Inter", serif;
+    font-family: "Encode Sans", "Inter", serif;
+    font-style: normal;
+    overflow-wrap: break-word;
+    color: var(--fc-base-main);
+    text-rendering: optimizeLegibility;
 }
 
-.md-typeset  h2,.md-typeset  h3 {
+.md-typeset  h2,.md-typeset  h3, .md-typeset  h4,.md-typeset  h5,.md-typeset  h6 {
     font-family: "Inter", "Encode Sans", serif;
     font-style: normal;
     overflow-wrap: break-word;
-    font-weight: 300;
-    color: var(--md-typeset-color);
+    color: var(--fc-base-main);
     text-rendering: optimizeLegibility;
     & small {
         font-size: var(--md-300);
     }
-}
-
-.md-typeset  h4,.md-typeset  h5,.md-typeset  h6 {
-    font-family: "Asap Condensed", "Inter", sans-serif;
-    font-style: normal;
-    overflow-wrap: break-word;
-    letter-spacing: -.01em;
-    color: var(--md-typeset-color);
-    text-rendering: optimizeLegibility;
 }
 
 .md-typeset h1 a:hover, 
@@ -80,71 +53,67 @@ font-family: "Encode Sans", "Inter", serif;
     border: none;
 }
 
-/* || ------ HEADINGS SIZES ------ */
-
-.md-content .md-typeset h1 {
-    font-size: calc(var(--fs-display-m) * 0.9);
-}
-
-.md-content--post .md-typeset h1 {
-    font-size: calc(var(--fs-display-m) * 0.75);
-    color: var(--fc-base-main);
-}
-
+/* make blogpost headings white */
 .md-post__content .toclink {
         color: var(--fc-base-main);
 }
 
 /* remove spacing if H2 comes right after H1 */
-.md-typeset h1:has(+ h2) { margin:0 0 .5rem;}
+.md-typeset h1:has(+ h2) { margin:0 0 1rem; }
 .md-typeset h1 + h2 { margin: 0 0 17.6px;}
 
 
-.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+.md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4, .md-typeset h5, .md-typeset h6 {
     margin-bottom: 1.125rem;
 }
 
-
+/* || ------ HEADINGS SIZES ------ */
 .md-typeset h1, .h1 {
     font-size: var(--fs-display-m);
     line-height: 60px;
     letter-spacing: -0.01em;
     font-weight: var(--fw-bold);
-
-    color: var(--primary-blue-600);
 }
 .md-typeset h2, .h2 {
-    font-size: var(--fs-headline-m);
+    font-size: var(--fs-headline-s);
     line-height: 40px;
     letter-spacing: -0.01em;
     font-weight: var(--fw-bold);
 }
 
 .md-typeset h3 {
-    font-size: var(--fs-headline-s);
+    font-size: var(--fs-headline-xs);
     line-height: 38px;
     letter-spacing: -0.01em;
     font-weight: var(--fw-semibold);
 }
 
 .md-typeset h4 {
-    font-size: var(--fs-headline-xs);
+    font-size: var(--fs-headline-xss);
     line-height: 30px;
     letter-spacing: -0.01em;
-    font-weight: var(--fw-medium);
+    font-weight: var(--fw-semibold);
 }
 
 .md-typeset h5 {
-    font-size: var(--fs-headline-xxs);
+    font-size: calc(var(--fs-headline-xxs) * 0.8);
     line-height: 28px;
     letter-spacing: -0.1px;
-    font-weight: var(--fw-regular);
+    font-weight: var(--fw-medium);
+    text-transform:none;
+}
+
+.md-typeset h6 {
+    font-size: calc(var(--fs-headline-xxs) * 0.6);
+    line-height: 24px;
+    letter-spacing: -0.1px;
+    font-weight: var(--fw-medium);
     text-transform:none;
 }
 
 /* || --- HEADERLINKS --- || */
 .md-typeset .headerlink {
-    --hl-size: 1.25rem;
+    --hl-size: 1.125rem;
     
     width: var(--hl-size);
     height: var(--hl-size);
