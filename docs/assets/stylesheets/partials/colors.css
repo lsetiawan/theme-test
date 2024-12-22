@@ -15,7 +15,7 @@
     --grey-800: hsla(210, 4%, 18%, 1);
     --grey-900: hsla(0, 0%, 15%, 1);
     --grey-950: hsla(0, 0%, 9%, 1);
-    --grey-990: hsla(0, 0%, 6%, 1);
+    --grey-990: hsla(0, 0%, 7%, 1);
 
     /* Light | White */
     --neutral-25: hsla(240, 20%, 99%, 1);
@@ -81,6 +81,13 @@
     --fc-on-color: var(--base-white);
     --fc-disabled: var(--neutral-700);
     --fc-primary: var(--primary-blue-600);
+
+    /* background | Lightmode */
+    --bg-base-main: var(--base-white);
+    --bg-base-second: var(--neutral-100);
+    --bg-primary-main: var(--primary-blue-600);
+    --bg-primary-second: var(--primary-blue-25);
+    --bg-disabled: var(--neutral-700);
 
     /* Stroke | Lightmode */
     --st-base-main: var(--neutral-700);

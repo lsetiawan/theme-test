@@ -75,6 +75,9 @@
 .md-search__form {
     border-radius: var(--br-04);
 }
+[data-md-color-scheme="slate"] .md-search__form {
+    background-color: var(--grey-900);
+}
 
 /* || ------ TABS ------ */
 .md-tabs {

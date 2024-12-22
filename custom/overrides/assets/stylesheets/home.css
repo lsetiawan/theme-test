@@ -3,6 +3,77 @@
 
 /* =========================
 
+    SCROLL ANIMATIONS   
+
+========================== */
+:root {
+    --move-50: 50px;
+    --move-100: 100px;
+    --move-200: 200px;
+    --tab-index: 1;
+}
+
+body {
+    background-image: linear-gradient(35deg, #30cfd0 0%, #330867 100%) !important;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+
+@keyframes appear {
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference){
+    .lp-tab {
+        opacity: 0;
+        transform: translateY(calc(var(--move-200) * var(--tab-index)));
+        animation: appear ease-out forwards;
+        animation-timeline: view();
+        animation-range: entry 0% cover 45%;
+    }
+
+    .grid-image {
+        opacity: 0;
+        transform: translateX(calc(var(--move-50) * var(--tab-index) * -1));
+        animation: appear ease-out forwards;
+        animation-timeline: view();
+        animation-range: entry 0% cover 45%;
+    }
+    .grid-text {
+        --tab-index: 2;
+        opacity: 0;
+        transform: translateX(calc(var(--move-50) * var(--tab-index)));
+        animation: appear ease-out forwards;
+        animation-timeline: view();
+        animation-range: entry 0% cover 45%;
+    }
+
+    .lp-layer.faq { scroll-snap-align: start;}
+
+    .faq .layer_header {
+        opacity: 0;
+        transform: translateX(calc(var(--move-100) * var(--tab-index)));
+        animation: appear ease-out forwards;
+        animation-timeline: view();
+        animation-range: entry 0% cover 45%;
+    }
+    .question {
+        opacity: 0;
+        transform: translateY(calc(var(--move-100) * var(--tab-index)));
+        animation: appear ease-out forwards;
+        animation-timeline: view();
+        animation-range: entry 0% cover 55%;
+    }
+}
+
+/* =========================
+
     LAYOUT UTILITIES   
 
 ========================== */
@@ -26,6 +97,39 @@ body {
 
 .lp-layer {
     background-color: var(--bg-base-main);
+    position: relative;
+}
+
+.lp-layer.hero {
+    background: none;
+
+    & p {
+        color: var(--grey-900);
+        font-weight: var(--fw-semibold);
+    }
+}
+
+.custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    transform: rotateY(180deg);
+    z-index: -1;
+}
+
+.custom-shape-divider-bottom .shape-fill {
+    fill: #171717;
 }
 
 /* inner container */
@@ -165,12 +269,16 @@ h1, h2, h3, h4, h5 {
 /* ====== Original theme ====== */
 
 .md-header {
-    background-color: var(--grey-950) !important;
+    background: none !important;
     color: var(--base-white) !important;
 }
 
 .md-header--shadow {
     box-shadow: none;
+}
+
+.md-search__form, .md-search__scrollwrap, .md-search-result__meta {
+    background: hsla(0, 0%, 0%, 0.25) !important;
 }
 
 /* ======= HERO ====== */
@@ -193,6 +301,7 @@ h1, h2, h3, h4, h5 {
 
 .hero_image {
     align-content: center;
+    z-index: 1;
 }
 
 .videowrapper {
