@@ -153,6 +153,10 @@ body {
     letter-spacing: -0.1px;
 }
 
+.layer_header span {
+    color: var(--md-accent-fg-color);
+}
+
 .even-columns {
     display: grid;
     gap: var(--gutter);
@@ -215,43 +219,85 @@ body {
 
 .button {
     display: inline-flex;
+    position: relative;
     cursor: pointer;
     text-decoration: none;
     font-size: var(--fs-text-m);
-    line-height: var(--fs-text-m);
     font-weight: var(--fw-semibold);
     line-height: 1;
     margin-inline: var(--size-08);
     transition: all ease-in-out var(--md-transition-duration);
 
     color: var(--base-white);
-    background-color: var(--primary-blue-600);
+    background: linear-gradient(135deg, var(--primary-blue-400) 0%, var(--md-accent-fg-color) 50%) no-repeat;
 
     border-radius: var(--br-06);
-    padding: var(--size-12) var(--size-20);
 }
-
 .button[data-type="inverted"] {
-    background-color: var(--bg-base-main);
-    box-shadow: 0 0 0 3px var(--st-base-main);
+    background: linear-gradient(135deg, #393F46 0%, #202328 50%) no-repeat;
     color: var(--fc-base-main);
 }
 
-[data-md-color-scheme="slate"]{
-    .button[data-type="inverted"] {
-        background-color: var(--bg-base-third);
-        box-shadow: 0 0 0 3px var(--st-base-main);
-    }
+
+.button a {
+    padding: var(--size-12) var(--size-20);
+    display: block;
+    background-color: var(--md-accent-fg-color);
+    border-radius: var(--br-06);
+    width: calc(100% - 2px); /* Full width minus 1px inset on each side */
+    height: calc(100% - 2px); /* Full height minus 1px inset on each side */
+    margin: 1px;
+}
+.button[data-type="inverted"] a {
+    background-color: #202328;
 }
 
 .button:hover,
-.button:focus-visible {
+.button:focus-visible,
+.button:active {
     transform: translateY(-0.25rem);
-    box-shadow: 0 0.125rem 5px 0 hsla(0, 0%, 0%, 0.25);
+    box-shadow: 0 0 0 3px white;
 }
 
-.button:active {
-    box-shadow: 0 0 0 3px var(--st-base-main);
+
+/* Arrow hover animation */
+button.right {
+    padding-right: 50px;
+}
+
+.button span {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
+
+.button.right span {
+    top: 50%;
+    right: 22%;
+    position: absolute;
+    transform: translateY(-50%) rotate(-45deg);
+    border-left: none;
+    border-top: none;
+}
+.button.right:hover span {
+    right: 18%;
+}
+
+.button.right span::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    background: white;
+    transform-origin: right;
+    transform: rotate(45deg) translate(0, 12px) scaleX(0);
+    transition: all 0.3s ease;
+}
+
+.button.right:hover span::before {
+    transform: rotate(45deg) translate(0, 12px) scaleX(1);
 }
 
 h1, h2, h3, h4, h5 {
@@ -302,6 +348,11 @@ h1, h2, h3, h4, h5 {
 .hero_image {
     align-content: center;
     z-index: 1;
+}
+
+.hero-context {
+    position: relative;
+    z-index: 3;
 }
 
 .videowrapper {
