@@ -225,7 +225,7 @@ cd /usr/data/pellcorp && git remote set-url origin https://github.com/pellcorp/c
 
 ### Config Overrides
 
-If you have pellcorp-overrides in github but not stored locally, You need to recreate the [/usr/data/pellcorp-overrides directory](Configuration-Overrides#create-local-repo) before running the installer.sh!
+If you have pellcorp-overrides in github but not stored locally, You need to recreate the [/usr/data/pellcorp-overrides directory](#) before running the installer.sh!
 
 ### Run the installer
 
@@ -477,13 +477,13 @@ To update your installation with the latest fixes you should run:
 
 This backs up your customisations, updates the creality repo, applies all changes to your `/usr/data/printer_data/config` directory and then reapplies your customisations over the top.
 
-Refer to [Update or Reinstall - What gets overriden](Simple-AF-Update-or-Reinstall)
+Refer to [Update or Reinstall - What gets overriden](#)
 
 ## Reinstalling
 
 A reinstall is only needed if you are switching probes or one or more github repos have got into an inconsistent state, so you can force a reinstall with the `--reinstall` argument in place of the `--install` argument.  The difference to a `--install`, is a `--install` will only finish up a partial install that failed due to a network failure or the like.
 
-Refer to [Update or Reinstall - What gets overriden](Simple-AF-Update-or-Reinstall)
+Refer to [Update or Reinstall - What gets overriden](#)
 
 ## Emergency Factory Reset
 

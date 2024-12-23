@@ -2,7 +2,6 @@
 title: Frequently asked questions
 hide:
   - footer
-icon: material/help
 ---
 
 # Frequently asked questions

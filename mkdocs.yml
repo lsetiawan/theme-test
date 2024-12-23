@@ -97,6 +97,8 @@ plugins:
 
 
 extra:
+  status:
+    <identifier>: <description>
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
@@ -153,10 +155,13 @@ nav:
   - Home: index.md
   - Getting started:
     - getting-started.md
-    - Markdown: markdown.md
-    - Setup example: setup.md
-    - Example page: cartographer.md
-  - FAQ: FAQ.md
-  - Using beta tags: test.md
+    - Markdown: getting-started/markdown.md
+    - Admonitions: getting-started/admonitions.md
+    - Codeblocks: getting-started/codeblocks.md
+    - Setup example: getting-started/setup.md
+    - Using beta tags: getting-started/test.md
   - Blog:
     - blog/index.md
+  - Example pages:
+    - cartographer.md
+    - FAQ.md
