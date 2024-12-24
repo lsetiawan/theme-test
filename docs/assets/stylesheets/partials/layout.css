@@ -33,6 +33,11 @@
     color: var(--md-typeset-color-white);
 }
 
+/* Back to top button */
+.md-top {
+    z-index: 3;
+}
+
 /* Scale up font-size on non-mobile */
 @media screen and (min-width: 35em) {
     .announce_text {
@@ -73,10 +78,10 @@
 
 /* Search */
 .md-search__form {
-    border-radius: var(--br-04);
+    border-radius: var(--br-24);
 }
 [data-md-color-scheme="slate"] .md-search__form {
-    background-color: var(--grey-900);
+    background-color: var(--grey-950);
 }
 
 /* || ------ TABS ------ */
