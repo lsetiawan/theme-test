@@ -332,7 +332,7 @@ What you now should have is a directory like this:
 ## Simple homepage template to get you started
 
 As i promised here is a simple template to get you started with your own homepage :smile:<br>
-You can download this [zip file](assets/downloads/Homepage_template.zip).
+You can download this [zip file](assets/Homepage_template.zip)
 
 Note that this is a simple homepage with a hero section, some content and a 3-column section.
 If you're looking for a parallax effect like the original insiders homepage you'd need to research that for yourself.
