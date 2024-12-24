@@ -119,3 +119,17 @@ html {
         gap: 30px;
     }
 }
+
+
+/* beating heart */
+.heart img {
+    animation: heartbeat 1s infinite ease;
+}
+
+@keyframes heartbeat {
+    0% {transform: scale(1);}
+    10% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    60% {transform: scale(1.15);}
+    75% {transform: scale(1.2);}
+}

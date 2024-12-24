@@ -31,6 +31,13 @@
 
 /* || ------ CODEBLOCKS ------ */
 
+/* Center codeblocks */
+@media screen and (max-width: 44.9375em) {
+    .md-content__inner>.highlight {
+        margin: 1em auto;
+    }
+}
+
 .md-typeset code {
     padding:2px;
 }
@@ -124,6 +131,20 @@
 .md-clipboard::after {
     height: 18px;
     width: 18px;
+}
+
+/* Remove spacing if tabbed codeblock is inside a list */
+.md-steps .tabbed-set {
+    margin-bottom: 0;
+}
+.tabbed-set + .highlight pre{
+    margin: 0;
+}
+
+/* remove top border radius on tabbed codebody within list */
+.md-steps .highlight .md-code__content {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
 }
 
 /* || ------ ADMONITIONS ------ */

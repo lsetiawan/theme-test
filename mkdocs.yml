@@ -165,3 +165,5 @@ nav:
   - Example pages:
     - cartographer.md
     - FAQ.md
+  - Tutorials:
+    - custom-homepage.md
