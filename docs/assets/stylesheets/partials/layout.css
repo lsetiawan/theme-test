@@ -261,7 +261,7 @@ li.md-tabs__item {
 
 /* --- Increase content width --- */
 .md-grid {
-    max-width:66rem;
+    max-width:76rem;
     gap: 30px;
 }
 
