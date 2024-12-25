@@ -31,9 +31,9 @@
 }
 
 /* Back to top button */
-.md-top {
+[dir=ltr] .md-top {
     z-index: 3;
-    top: 5rem;
+    top: 5rem !important;
 }
 
 /* Scale up font-size on non-mobile */
