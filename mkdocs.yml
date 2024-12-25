@@ -158,8 +158,10 @@ nav:
     - Markdown: getting-started/markdown.md
     - Admonitions: getting-started/admonitions.md
     - Codeblocks: getting-started/codeblocks.md
-    - Setup example: getting-started/setup.md
-    - Using beta tags: getting-started/test.md
+    - Custom:
+      - Setup example: getting-started/setup.md
+    - title 2 test:
+      - Using beta tags: getting-started/test.md
   - Blog:
     - blog/index.md
   - Example pages:

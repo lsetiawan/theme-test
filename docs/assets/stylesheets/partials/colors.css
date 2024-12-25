@@ -2,6 +2,8 @@
     --base-white: hsla(0, 100%, 100%, 1);
     --base-black: hsla(0, 0%, 0%, 1);
 
+
+
     /* Dark | Grey */
     --grey-25: hsla(220, 5%, 61%, 1);
     --grey-50: hsla(214, 7%, 55%, 1);
@@ -137,7 +139,7 @@
     --md-code-hl-color--light:         var(--md-accent-fg-color--transparent) !important;
 
     /* // Typeset color shades */
-    --md-typeset-color:                var(--footer-clr-bg);
+    --md-typeset-color:                var(--grey-100);
 
     /* // Typeset `a` color shades */
     --md-typeset-a-color:              var(--grey-600) !important;
