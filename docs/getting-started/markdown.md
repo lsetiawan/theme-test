@@ -249,6 +249,30 @@ Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2] (example of the
 ```
 </div>
 
+## Buttons
+
+```md
+[Subscribe to our newsletter](#){ .md-button }
+```
+
+[Subscribe to our newsletter](#){ .md-button }
+
+### Primary button
+
+```md
+[Subscribe to our newsletter](#){ .md-button .md-button--primary }
+```
+
+[Subscribe to our newsletter](#){ .md-button .md-button--primary }
+
+### Adding idons to buttons
+
+```md
+[Send :fontawesome-solid-paper-plane:](#){ .md-button }
+```
+
+[Send :fontawesome-solid-paper-plane:](#){ .md-button }
+
 
 [^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 [^2]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.

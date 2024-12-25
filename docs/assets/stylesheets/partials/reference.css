@@ -223,3 +223,10 @@ thead th, .highlight span.filename{
     color: var(--md-accent-fg-color);
     font-size: var(--md-300);
 }
+
+/* || ------ BUTTONS ------ */
+
+/* Outlined button */
+[data-md-color-scheme="slate"] .md-typeset .md-button {
+    color: var(--base-white);
+}

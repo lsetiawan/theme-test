@@ -160,7 +160,6 @@ nav:
     - Codeblocks: getting-started/codeblocks.md
     - Custom:
       - Setup example: getting-started/setup.md
-    - title 2 test:
       - Using beta tags: getting-started/test.md
   - Blog:
     - blog/index.md

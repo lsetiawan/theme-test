@@ -316,8 +316,8 @@ h1, h2, h3, h4, h5 {
 
 /* ====== Original theme ====== */
 
-.md-header {
-    background: none !important;
+.md-header, .md-tabs {
+    background: transparent !important;
     color: var(--base-white) !important;
 }
 
