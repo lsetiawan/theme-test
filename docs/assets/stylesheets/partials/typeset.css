@@ -3,9 +3,9 @@
     TYPESET STYLING
 
 -------------------------------------------*/
-body {
+.md-typeset {
     font-size: var(--fs-text-l);
-    line-height: 24px;
+    line-height: 1.4;
     letter-spacing: 0.15px;
 }
 
@@ -23,17 +23,7 @@ body {
 /* || ------ HEADINGS ------ */
 
 
-
-
-.md-typeset h1 {
-    font-family: "Encode Sans", "Inter", serif;
-    font-style: normal;
-    overflow-wrap: break-word;
-    color: var(--fc-base-main);
-    text-rendering: optimizeLegibility;
-}
-
-.md-typeset  h2,.md-typeset  h3, .md-typeset  h4,.md-typeset  h5,.md-typeset  h6 {
+.md-typeset h1, .md-typeset  h2,.md-typeset  h3, .md-typeset  h4,.md-typeset  h5,.md-typeset  h6 {
     font-family: "Inter", "Encode Sans", serif;
     font-style: normal;
     overflow-wrap: break-word;
@@ -64,13 +54,13 @@ body {
 
 
 .md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4, .md-typeset h5, .md-typeset h6 {
-    margin-bottom: 1.125rem;
+    margin-block: 0.8em;
 }
 
 /* || ------ HEADINGS SIZES ------ */
 .md-typeset h1, .h1 {
     font-size: var(--fs-display-m);
-    line-height: 60px;
+    margin-block: 0.4em;
     letter-spacing: -0.01em;
     font-weight: var(--fw-bold);
 }

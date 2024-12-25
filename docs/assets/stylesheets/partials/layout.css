@@ -36,6 +36,7 @@
 /* Back to top button */
 .md-top {
     z-index: 3;
+    top: 5rem !important;
 }
 
 /* Scale up font-size on non-mobile */
@@ -156,6 +157,7 @@ li.md-tabs__item {
     font-family: "Inter", "Encode Sans", serif;
     color: var(--md-title-color);
     font-weight: var(--fw-semibold);
+    margin-bottom: .1rem;
 }
 
 /* center left nav items */
@@ -200,8 +202,8 @@ label.md-nav__link + nav label.md-nav__link {
 /* || ------ PRIMARY SIDEBAR ------ */
 
 /* Link::Active */
-[data-md-color-scheme="default"] .md-nav__item--active > .md-nav__link--active { font-weight: bold; color: var(--md-accent-fg-color);}
-[data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link--active { font-weight: bold; color: var(--md-accent-fg-color);}
+[data-md-color-scheme="default"] .md-nav__item--active > .md-nav__link--active {color: var(--md-accent-fg-color);}
+[data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link--active {color: var(--md-accent-fg-color);}
 
 /* Sidebar title colors */
 [data-md-color-scheme="default"] .md-nav__item--section>label>span { color: var(--md-title-color); font-weight: 500;}
@@ -320,6 +322,13 @@ details>p {
 }
 .md-footer__link {
     margin: 0;
+}
+
+.md-footer__button svg {
+    width: 1.6em;
+}
+.md-footer__title {
+    font-size: 1.6em;
 }
 
 [data-md-color-scheme="default"] .md-footer__inner a:hover {
