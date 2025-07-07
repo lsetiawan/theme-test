@@ -151,6 +151,7 @@
 
 .md-typeset .admonition-title {
     margin: -20px -.6rem .6rem -.6rem;
+    border-top-right-radius: var(--br-04) !important;
 }
 
 .md-typeset .admonition, .md-typeset details {

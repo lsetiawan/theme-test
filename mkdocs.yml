@@ -153,6 +153,14 @@ markdown_extensions:
 # Page tree
 nav:
   - Home: index.md
+  - Probes:
+    - Cartographer: getting-started/markdown.md
+    - Beacon: getting-started/admonitions.md
+    - BLTouch: getting-started/codeblocks.md
+    - Microprobe: getting-started/markdown.md
+    - Klicky: getting-started/admonitions.md
+    - BTTEddy: getting-started/codeblocks.md
+    - EddyNG: getting-started/markdown.md
   - Getting started:
     - getting-started.md
     - Markdown: getting-started/markdown.md
